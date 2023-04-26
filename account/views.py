@@ -5,7 +5,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserRegistrationSerializer, UserSerializer
 from rest_framework import status
 
-# Create your models here.
+
+
 class UserRegistration(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserRegistrationSerializer
