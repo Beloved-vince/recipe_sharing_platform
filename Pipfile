@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "*"
 shell = "*"
+djangorestframework = "*"
+mysqlclient = "*"
+rest-framework-simplejwt = "*"
 
 [dev-packages]
 

@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserRegistrationSerializer, UserSerializer
 from rest_framework import status
+from rest_framework.authtoken.models import Token
 
 
 
@@ -15,9 +16,8 @@ class UserRegistration(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
-        refresh = RefreshToken.for_user(user)
+        token, created = Token.objects.get_or_create(user=user)
         response_data = {
-            'refresh': str(refresh),
-            'access': str(refresh.access_token),
+            'token': token.key
         }
         return Response(response_data, status=status.HTTP_201_CREATED)
