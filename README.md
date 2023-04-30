@@ -12,8 +12,8 @@ Our API provides the following endpoints:
 
 - `localhost/recipes` - Returns a list of all recipes.
 - `localhost/recipes/{id}` - Returns details for a specific recipe.
-- `localhost/recipes/search` - Searches for recipes by keyword or ingredients.
-- `localhost/recipes/random` - Returns a random recipe.
+- `localhost/recipes/rating` - Searches for recipes by keyword or ingredients.
+- `localhost/recipes/comments` - Returns a random recipe.
 
 Each endpoint supports both JSON and XML response formats.
 
