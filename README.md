@@ -1,6 +1,6 @@
 # Recipe Sharing Platform API
 
-The Recipe Sharing Platform API provides developers with a fast and easy way to build scalable recipe sharing applications without having to write excess code. With our API, users can upload or share their recipe, get recipe details, and search for recipes, among other features.
+The Recipe Sharing Platform API provides developers with a fast and easy way to build scalable recipe sharing applications without having to write excess code. With the recipe sharing API, users can upload or share their recipe, get recipe details, and search for recipes, among other features.
 
 ## Getting Started
 
