@@ -8,7 +8,7 @@ To get started with our API, you will need to sign up for an account using the a
 
 ## API Endpoints
 
-Our API provides the following endpoints:
+The recipe sharing platform API provides the following endpoints:
 
 - `localhost/recipes` - Returns a list of all recipes.
 - `localhost/recipes/{id}` - Returns details for a specific recipe.
@@ -20,4 +20,6 @@ Each endpoint supports both JSON and XML response formats.
 
 ## Authentication
 
-Access to our API requires an API key, which should be included in the headers of each request. If you do not include a valid API key, you will receive a 401 Unauthorized error.
+Access to our API requires an API key, which should be included in the headers of each request. If you do not include a valid API key, you will receive a 401 Unauthorized error. The API endpoint for signing up and getting API key:
+
+- `localhost/account/sign-up` - returns the API key/token for authentication
