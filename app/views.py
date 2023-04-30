@@ -75,9 +75,18 @@ class RatingCreate(generics.ListCreateAPIView):
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-class CommentCreate(generics.CreateAPIView):
+class CommentCreate(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [IsAuthenticated]
     authentication_classes = [TokenAuthentication]
 
+    def post(self, request, *args, **kwargs):
+        user = request.user
+        recipe_id = get_object_or_404(Comment, id=args)
+        text = request.data.get('score')
+        
+        rating = Rating.objects.create(recipe=recipe_id, user=user, score=score, fullname=fullname)
+        serializer = RatingSerializer(rating)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
