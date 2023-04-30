@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
+
 class IsAuthorOrReadOnly(BasePermission):
     def has_object_permission(self, request, view, obj):
         """Read permission allowed to any request but 
@@ -60,12 +61,17 @@ class RatingCreate(generics.ListCreateAPIView):
     def post(self, request, pk):
         if request.user is IsAuthorOrReadOnly:
             return Response({'error': 'Not authorised to rate your recipe'})
+        
+        firstname = request.user.first_name
+        lastname = request.user.last_name
+        
+        fullname = firstname + ' '+  lastname
         user = request.user
         recipe_id = get_object_or_404(Recipe, id=pk)
         score = request.data.get('score')
         
-        rating = Rating.objects.create(recipe=recipe_id, user=user, score=score)
-        serializer = RatingSerializer(rating.object)
+        rating = Rating.objects.create(recipe=recipe_id, user=user, score=score, fullname=fullname)
+        serializer = RatingSerializer(rating)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -75,19 +81,3 @@ class CommentCreate(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
     authentication_classes = [TokenAuthentication]
 
-
-
-
-
-
-
-
-
-# @api_view(['GET', 'PUT'])
-# @permission_classes([IsAuthenticated, IsAuthorOrReadOnly])
-# @authentication_classes([TokenAuthentication])
-# def rating(request, pk):
-#     if request.user is IsAuthenticated:
-#         return Response({'error': "Author has no priviledge to rate his work"})
-#     # else:
-#     return Response(IsAuthorOrReadOnly)
