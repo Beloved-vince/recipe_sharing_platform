@@ -114,8 +114,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 ##### parameters accepted
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| `username` | string | [required] unique usename of the requested user|
-| `password` | string | [required]. password must contain atleast 8 character with alphabet numeric and symbols|
-| `firstname` | string | [required] User first name. |
-| `lastname` | string | [required]. User last name. |
-| `email` | email/string | [required]unique email address. |
+| `name` | string | [required] unique usename of the requested user|
+| `ingredient` | dictionary | [required]. password must contain atleast 8 character with alphabet numeric and symbols|
+| `preparation_steps` | string | [required] User first name. |
+| `cooking_time` | int | [required]. User last name. |
+| `nutrition_info` | dictionary | [required]unique email address. |
