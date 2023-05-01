@@ -110,3 +110,11 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 - POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes 
 
+##### parameters accepted
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| `username` | string | [required] unique usename of the requested user|
+| `password` | string | [required]. password must contain atleast 8 character with alphabet numeric and symbols|
+| `firstname` | string | [required] User first name. |
+| `lastname` | string | [required]. User last name. |
+| `email` | email/string | [required]unique email address. |
