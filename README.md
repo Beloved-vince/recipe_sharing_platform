@@ -109,7 +109,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 ```
 
-- POST /recipes
+## POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes
 
 
@@ -121,3 +121,4 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `preparation_steps` | string | [required] . text field  |
 | `cooking_time` | int | [required]. e.g 50. |
 | `nutrition_info` | dictionary | [required] dictionary format. |
+
