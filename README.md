@@ -46,8 +46,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `email` | email/string | [required]unique email address. |
 
 
-- GET /recipes
-    - Returns a list of all recipes
+ GET /recipes
+    - Returns a list of all recipes ```
     
 [
   {
@@ -105,8 +105,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
     }
   }
 ]```
-    Tags: json, recipe, ingredients, nutrition, cooking_time, preparation_steps
-# 
-- POST /recipes
+
+
+ POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes 
 
