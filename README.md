@@ -32,7 +32,7 @@ Access to the API endpoint requires an API key, which should be included in the 
 ## Endpoint Parameters and Error Handling
 The recipe sharing API endpoint parameters to be passed in the request URL and header
 
-- #  For Authentication
+- ###  For Authentication
 
 - POST /account/sign-up
     - Returns a token for sign-up user
@@ -121,4 +121,6 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `preparation_steps` | string | [required] . text field  |
 | `cooking_time` | int | [required]. e.g 50. |
 | `nutrition_info` | dictionary | [required] dictionary format. |
+
+
 
