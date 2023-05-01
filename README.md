@@ -25,6 +25,5 @@ Access to the API endpoint requires an API key, which should be included in the 
 - `localhost/account/sign-up` - returns the API key/token for authentication
 
 ## Rate Limiting
-
-* To prevent API abuse this API is rate-limited.
+ To prevent API abuse this API is rate-limited.
 
