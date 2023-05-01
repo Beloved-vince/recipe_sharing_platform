@@ -17,10 +17,10 @@ class Rating(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     user= models.ForeignKey(User, on_delete=models.CASCADE)
     score = models.IntegerField()
-    fullname = models.CharField(max_length=100)
 
 class Comment(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
+    fullname = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
