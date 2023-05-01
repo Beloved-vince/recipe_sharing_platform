@@ -125,7 +125,9 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 ## GET `localhost/recipes/{id}`
 - return a dictionary of specified recipe base on id
-{
+
+
+```{
     "id": "987654321",
     "author": "Jane Doe",
     "name": "Chicken Curry",
@@ -152,3 +154,4 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
       "carbohydrates": "30g"
     }
   }```
+  
