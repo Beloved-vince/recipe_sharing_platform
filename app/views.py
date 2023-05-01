@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated, BasePermission
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.response import Response
 from rest_framework import status
-
+from rest_framework.throttling import UserRateThrottle, AnonRateThrottle
 
 
 class IsAuthorOrReadOnly(BasePermission):
@@ -33,6 +33,7 @@ class RecipeList(generics.ListCreateAPIView):
                 token into the header before performing any operations else it 
                 returns 403 forbidden error
     """
+    throttle_classes = [UserRateThrottle]
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = [IsAuthenticated]
@@ -80,6 +81,7 @@ class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
                 returns 403 forbidden error and if the requested user is the author
                 of the recipe before performing operation else return error 403
     """
+    throttle_classes = [UserRateThrottle]
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = [IsAuthenticated, IsAuthorOrReadOnly]
@@ -105,7 +107,7 @@ class RatingCreate(generics.ListCreateAPIView):
                 token into the header before performing any operations else it 
                 returns 403 forbidden error
     """
-    
+    throttle_classes = [UserRateThrottle]
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
     permission_classes = [IsAuthenticated]
@@ -138,6 +140,7 @@ class CommentCreate(generics.ListCreateAPIView):
                 token into the header before performing any operations else it 
                 returns 403 forbidden error
     """
+    throttle_classes = [UserRateThrottle]
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [IsAuthenticated]
