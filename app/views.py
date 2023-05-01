@@ -144,6 +144,16 @@ class CommentCreate(generics.ListCreateAPIView):
     authentication_classes = [TokenAuthentication]
 
     def post(self, request, *args, **kwargs):
+        """
+            This method allow post request method only
+            to allow users to comment to a specific recipe
+            
+            args:
+                fullname: requested user firstname and lastname as stored in the database
+                user = requested user id
+                recipe_id: recipe id to be included in the api endpoint
+                text: comment on the recipe 
+        """
          
         firstname = request.user.first_name
         lastname = request.user.last_name
