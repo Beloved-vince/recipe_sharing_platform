@@ -46,11 +46,65 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `email` | email/string | [required]unique email address. |
 
 
-
-
-
 - GET /recipes
     - Returns a list of all recipes
+    
+[
+  {
+    "id": "123456789",
+    "author": "John Smith",
+    "name": "Spaghetti Bolognese",
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "quantity": "200g"
+      },
+      {
+        "name": "ground beef",
+        "quantity": "500g"
+      },
+      {
+        "name": "tomato sauce",
+        "quantity": "400g"
+      }
+    ],
+    "preparation_steps": "1. Cook spaghetti according to package instructions. \n2. Brown ground beef in a pan. \n3. Add tomato sauce to the beef and let it simmer for 10 minutes. \n4. Serve the beef sauce over the cooked spaghetti.",
+    "cooking_time": "30 minutes",
+    "nutrition_info": {
+      "calories": "500",
+      "fat": "25g",
+      "protein": "30g",
+      "carbohydrates": "40g"
+    }
+  },
+  {
+    "id": "987654321",
+    "author": "Jane Doe",
+    "name": "Chicken Curry",
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "quantity": "500g"
+      },
+      {
+        "name": "curry powder",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "coconut milk",
+        "quantity": "400ml"
+      }
+    ],
+    "preparation_steps": "1. Cut the chicken into small pieces. \n2. Fry the chicken in a pan. \n3. Add the curry powder and fry for 1 minute. \n4. Add the coconut milk and let it simmer for 20 minutes. \n5. Serve with rice.",
+    "cooking_time": "35 minutes",
+    "nutrition_info": {
+      "calories": "600",
+      "fat": "35g",
+      "protein": "40g",
+      "carbohydrates": "30g"
+    }
+  }
+]
 
 - POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes 
