@@ -1,6 +1,6 @@
 # Recipe Sharing Platform API
 
-The Recipe Sharing Platform API provides developers with a fast and easy way to build scalable recipe sharing applications without having to write excess code. With our API, users can upload or share their recipe, get recipe details, and search for recipes, among other features.
+The Recipe Sharing Platform API provides developers with a fast and easy way to build scalable recipe sharing applications without having to write excess code. With the recipe sharing API, users can upload or share their recipe, get recipe details, and search for recipes, among other features.
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ Each endpoint supports both JSON and XML response formats.
 
 ## Authentication
 
-Access to our API requires an API key, which should be included in the headers of each request. If you do not include a valid API key, you will receive a 401 Unauthorized error. The API endpoint for signing up and getting API key:
+Access to the API endpoint requires an API key, which should be included in the headers of each request. If you do not include a valid API key, you will receive a 401 Unauthorized error. The API endpoint for signing up and getting API key:
 
 - `localhost/account/sign-up` - returns the API key/token for authentication
 
