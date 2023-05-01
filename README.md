@@ -34,8 +34,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 - ###  For Authentication
 
-- - POST /account/sign-up
-    - - Returns a token for sign-up user
+* - POST /account/sign-up
+    * Returns a token for sign-up user
 ##### parameters accepted
 | Key | Type | Description |
 | --- | ---- | ----------- |
@@ -123,4 +123,32 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `nutrition_info` | dictionary | [required] dictionary format. |
 
 
-
+## GET `localhost/recipes/{id}`
+- return a dictionary of specified recipe base on id
+{
+    "id": "987654321",
+    "author": "Jane Doe",
+    "name": "Chicken Curry",
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "quantity": "500g"
+      },
+      {
+        "name": "curry powder",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "coconut milk",
+        "quantity": "400ml"
+      }
+    ],
+    "preparation_steps": "1. Cut the chicken into small pieces. \n2. Fry the chicken in a pan. \n3. Add the curry powder and fry for 1 minute. \n4. Add the coconut milk and let it simmer for 20 minutes. \n5. Serve with rice.",
+    "cooking_time": "35 minutes",
+    "nutrition_info": {
+      "calories": "600",
+      "fat": "35g",
+      "protein": "40g",
+      "carbohydrates": "30g"
+    }
+  }```
