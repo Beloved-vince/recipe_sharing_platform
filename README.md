@@ -109,7 +109,6 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 ```
 
-
 - POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes
 
@@ -117,8 +116,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 ##### parameters accepted
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| `name` | string | [required] unique usename of the requested user|
-| `ingredient` | dictionary | [required]. password must contain atleast 8 character with alphabet numeric and symbols|
+| `name` | string | [required] recipe name |
+| `ingredient` | json | [required]. in json format using this format [{'name'}]|
 | `preparation_steps` | string | [required] User first name. |
 | `cooking_time` | int | [required]. User last name. |
 | `nutrition_info` | dictionary | [required]unique email address. |
