@@ -105,7 +105,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
     }
   }
 ]```
-
+    Tags: json, recipe, ingredients, nutrition, cooking_time, preparation_steps
 # 
 - POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes 
