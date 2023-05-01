@@ -28,3 +28,18 @@ Access to the API endpoint requires an API key, which should be included in the 
  To prevent API abuse this API is rate-limited. As only authenticated user can perform operation on the endpoint, user can oly make
  10 request per minute
 
+
+## Endpoint Parameters and Error Handling
+The recipe sharing API endpoint parameters to be passed in the request URL and header
+
+) For Authentication
+
+- POST /account/sign-up
+    - Returns a token for sign-up user
+
+- GET /recipes
+    - Returns a list of all recipes
+
+- POST /recipes
+    - Create a new recipe and add it to the existing recipes and return list of all recipes 
+
