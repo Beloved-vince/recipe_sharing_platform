@@ -36,6 +36,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 - POST /account/sign-up
     - Returns a token for sign-up user
+## Table
 | Key | Type | Description |
 | --- | ---- | ----------- |
 | `username` | string | [required] unique usename of the requested user|
