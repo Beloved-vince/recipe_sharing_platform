@@ -47,7 +47,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 
  GET /recipes
-    - Returns a list of all recipes ```
+    - Returns a list of all recipes
     
 ```[
   {
