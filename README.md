@@ -49,7 +49,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
  GET /recipes
     - Returns a list of all recipes ```
     
-[
+```[
   {
     "id": "123456789",
     "author": "John Smith",
@@ -105,8 +105,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
     }
   }
 ]```
-
-
- POST /recipes
+    Tags: json, recipe, ingredients, nutrition, cooking_time, preparation_steps
+# 
+- POST /recipes
     - Create a new recipe and add it to the existing recipes and return list of all recipes 
 
