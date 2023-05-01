@@ -49,7 +49,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 - GET /recipes
     - Returns a list of all recipes
     
-```[
+[
   {
     "id": "123456789",
     "author": "John Smith",
