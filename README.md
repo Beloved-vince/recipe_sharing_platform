@@ -23,3 +23,8 @@ Each endpoint supports both JSON and XML response formats.
 Access to our API requires an API key, which should be included in the headers of each request. If you do not include a valid API key, you will receive a 401 Unauthorized error. The API endpoint for signing up and getting API key:
 
 - `localhost/account/sign-up` - returns the API key/token for authentication
+
+## Rate Limiting
+
+* To prevent API abuse this API is rate-limited.
+
