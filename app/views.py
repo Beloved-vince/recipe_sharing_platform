@@ -92,6 +92,20 @@ class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class RatingCreate(generics.ListCreateAPIView):
+    """
+        Returns all recipes and their details present in the
+        database
+        args: 
+            queryset: get all the recipe present in the database
+            serializer_class: serializes only what must be return after
+                validation
+            permission_classes: check if requested user is authenticated
+                it returns 401 error if requested user is not authenticated
+            authentication_classes: Check if requested user user include the ApI
+                token into the header before performing any operations else it 
+                returns 403 forbidden error
+    """
+    
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
     permission_classes = [IsAuthenticated]
@@ -111,6 +125,19 @@ class RatingCreate(generics.ListCreateAPIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 class CommentCreate(generics.ListCreateAPIView):
+    """
+        Returns all recipes and their details present in the
+        database
+        args: 
+            queryset: get all the recipe present in the database
+            serializer_class: serializes only what must be return after
+                validation
+            permission_classes: check if requested user is authenticated
+                it returns 401 error if requested user is not authenticated
+            authentication_classes: Check if requested user user include the ApI
+                token into the header before performing any operations else it 
+                returns 403 forbidden error
+    """
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [IsAuthenticated]
