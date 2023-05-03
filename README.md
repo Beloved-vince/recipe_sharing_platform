@@ -173,10 +173,10 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `author` | string | author name must be pass |
 
   ## DELETE `localhost/recipes/{id}/`
-- Allow authorised user only to delete the recipe
+- Allow authorised user only to delete the recipe with the Token key
 
 
 ### Sub paramaters
 
 ## GET `localhost/recipes/?author=author_name, name=recipe_name`
-
+- Returns recipe with the specified author name and recipe name
