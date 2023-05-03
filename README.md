@@ -167,6 +167,6 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `name` | string | recipe name |
 | `ingredient` | json |In json format using this format [{'name': 'Spagetti', 'quantity': '200g'}]|
 | `preparation_steps` | string | text field  |
-| `cooking_time` | int | [required]. e.g 50. |
+| `cooking_time` | int | e.g 50. |
 | `nutrition_info` | dictionary | [required] dictionary format. |
-| ``
+|
