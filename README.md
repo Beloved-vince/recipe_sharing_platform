@@ -171,3 +171,12 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 | `cooking_time` | int | e.g 50. |
 | `nutrition_info` | dictionary | dictionary format. |
 | `author` | string | author name must be pass |
+
+  ## DELETE `localhost/recipes/{id}/`
+- Allow authorised user only to delete the recipe
+
+
+### Sub paramaters
+
+## GET `localhost/recipes/?author=author_name, name=recipe_name`
+
