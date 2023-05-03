@@ -161,6 +161,7 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 - - `NOTE:` A check will be made on request if the Authentication key is the recipe author key
     - Using `PATCH` request will partially update the recipe datails while `PUT` will run a full update
     - Also note that using `PUT` you will be require to update `author`
+    - Lastly only authenticated and the recipe `author` are priviledge to update the recipe details
 ##### parameters accepted
 | Key | Type | Description |
 | --- | ---- | ----------- |
