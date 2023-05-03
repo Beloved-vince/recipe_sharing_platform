@@ -159,3 +159,14 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
   ## PUT/PATCH `localhost/recipes/{id}/`
 - Allow changes to be made to a recipe only if the requested user is the author
 - - `NOTE:` A check will be made on request if the Authentication key is the recipe author key
+    - Using `PATCH` request will partially update the recipe datails while `PUT` will run a full update
+    - Also note that using `PUT` you will be require to update `author`
+##### parameters accepted
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| `name` | string | recipe name |
+| `ingredient` | json |In json format using this format [{'name': 'Spagetti', 'quantity': '200g'}]|
+| `preparation_steps` | string | text field  |
+| `cooking_time` | int | [required]. e.g 50. |
+| `nutrition_info` | dictionary | [required] dictionary format. |
+| ``
