@@ -178,8 +178,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
 
 ### Sub paramaters
 
-## GET `localhost/recipes/?author=author_name, name=recipe_name`
+### GET `localhost/recipes/?author=author_name, name=recipe_name`
 - Returns recipe with the specified author name and recipe name
 
-## GET `localhost/recipes/?page_size=2, page_number=10`
+### GET `localhost/recipes/?page_size=2, page_number=10`
  - Returns 10 recipes per pages
