@@ -1,6 +1,8 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 from .views import RecipeList, RecipeDetail, CommentCreate, RatingCreate
-from . import views
+from. import views
+
 
 urlpatterns = [
     path('recipes/', RecipeList.as_view()),

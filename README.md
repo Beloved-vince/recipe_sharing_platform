@@ -12,9 +12,9 @@ The recipe sharing platform API provides the following endpoints:
 
 - `localhost/recipes` - Returns a list of all recipes.
 - `localhost/recipes/{id}` - Returns details for a specific recipe.
-- `localhost/recipes/rating` - Searches for recipes by keyword or ingredients.
-- `localhost/recipes/comments` - Returns a comment of all recipes.
-- `localhost/recipes/search` - Returns recipes base on recipe name
+- `localhost/recipes/{id}/rating` - display all recipe rating, rated by users.
+- `localhost/recipes/{`id`}/comments` - Returns a comments of a specific recipe.
+- `localhost/recipes/search` - Returns recipes base on query name
 
 Each endpoint supports both JSON and XML response formats.
 
@@ -27,7 +27,6 @@ Access to the API endpoint requires an API key, which should be included in the 
 ## Rate Limiting
  To prevent API abuse this API is rate-limited. As only authenticated user can perform operation on the endpoint, user can oly make
  10 request per minute
-
 
 ## Endpoint Parameters and Error Handling
 The recipe sharing API endpoint parameters to be passed in the request URL and header
@@ -155,3 +154,8 @@ The recipe sharing API endpoint parameters to be passed in the request URL and h
       "carbohydrates": "30g"
     }
   }```
+
+  ```
+  ## PUT/PATCH `localhost/recipes/{id}/`
+- Allow changes to be made to a recipe only if the requested user is the author
+- - `NOTE:` A check will be made on request if the Authentication key is the recipe author key
