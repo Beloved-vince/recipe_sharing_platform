@@ -36,7 +36,7 @@ class IsAuthorOrReadOnly(BasePermission):
 # Create your views here.
 class RecipeList(generics.ListCreateAPIView):
 
-    # throttle_classes = [UserRateThrottle]
+    throttle_classes = [UserRateThrottle]
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     # permission_classes = [IsAuthenticated]
@@ -93,8 +93,8 @@ class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
     throttle_classes = [UserRateThrottle]
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
-    permission_classes = [IsAuthenticated, IsAuthorOrReadOnly]
-    authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated, IsAuthorOrReadOnly]
+    # authentication_classes = [TokenAuthentication]
     
     def perform_create(self, serializer):
         author = self.request.user.first_name
@@ -111,8 +111,8 @@ class RatingCreate(generics.ListCreateAPIView):
     throttle_classes = [UserRateThrottle]
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [TokenAuthentication]
      
     def post(self, request, pk):
         if request.user is IsAuthorOrReadOnly:
@@ -137,8 +137,8 @@ class CommentCreate(generics.ListCreateAPIView):
     throttle_classes = [UserRateThrottle]
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [TokenAuthentication]
     pagination_class = PageNumberPagination
 
     def post(self, request, *args, **kwargs):
