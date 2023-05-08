@@ -36,11 +36,11 @@ class IsAuthorOrReadOnly(BasePermission):
 # Create your views here.
 class RecipeList(generics.ListCreateAPIView):
 
-    throttle_classes = [UserRateThrottle]
+    # throttle_classes = [UserRateThrottle]
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [TokenAuthentication]
     filter_backends = [SearchFilter, OrderingFilter]
     search_fields = ['name', 'author']
     ordering_fields = ['name']
